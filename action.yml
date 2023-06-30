@@ -1,0 +1,25 @@
+name: 'Version bumper for iOS projects'
+description: 'Bumps the version number of a project'
+inputs:
+  appStoreConnectPrivateKey:
+    description: 'App Store Connect api key'
+    required: true
+  keyID:
+    description: 'App Store Connect api key ID'
+    required: true
+  issuerID:
+    description: 'App Store Connect api issuer ID'
+    required: true
+  bundleID:
+    description: 'The app bundle ID'
+outputs:
+  appVersion:
+    description: 'The app version from App Store Connect'
+  appBuildVersion:
+    description: 'The app build version from App Store Connect'
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  icon: 'chevrons-up'
+  color: 'orange'
